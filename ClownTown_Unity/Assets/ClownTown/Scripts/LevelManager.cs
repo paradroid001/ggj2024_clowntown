@@ -9,6 +9,8 @@ namespace ClownTown
     {
         [SerializeField]
         string levelName = "Unknown Level";
+        [SerializeField]
+        Transform[] playerSpawns = new Transform[4]; //TODO hardcoded :X
         // Start is called before the first frame update
         void Start()
         {
@@ -32,6 +34,7 @@ namespace ClownTown
             PlayerManager p = playerInput.gameObject.GetComponent<PlayerManager>();
             if (p != null)
             {
+                p.transform.position = playerSpawns[playerInput.playerIndex].position;
                 p.PlayerSetup(playerInput.playerIndex);
             }
             else
