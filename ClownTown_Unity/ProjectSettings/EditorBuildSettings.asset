@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/ClownTown/Scenes/SampleScene.unity
-    guid: d1c3109bdb54ad54c8a2b2838528e640
+    path: Assets/ClownTown/Scenes/ClownMenu.unity
+    guid: f036f66b950cdb049a4f2a55a15b3902
+  - enabled: 1
+    path: Assets/ClownTown/Scenes/ClownTest.unity
+    guid: 31d44eec21643644ab1a59c9e4e7bb2c
   m_configObjects: {}
