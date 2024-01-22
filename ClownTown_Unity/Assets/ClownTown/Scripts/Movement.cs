@@ -8,6 +8,7 @@ namespace ClownTown
     {
         public float maxSpeed;
         public float speed;
+        public bool faceCurrentDirection = true;
         Vector2 currentDirection;
         Vector3 movement;
         
@@ -41,7 +42,17 @@ namespace ClownTown
 
         public void SetDirection(Vector2 newDirection)
         {
-            currentDirection = newDirection;
+            //Only set a new direction if you get
+            //non-idle input, otherwise keep the old one.
+            if (newDirection != Vector2.zero)
+            {
+                currentDirection = newDirection;
+                speed = maxSpeed;
+            }
+            else
+            {
+                speed=0;
+            }
         }
         public void SetDirection(float x, float y)
         {
@@ -51,6 +62,13 @@ namespace ClownTown
         void Move()
         {
             //Assumed movement is normalised
+            if (faceCurrentDirection)
+            {
+                Vector3 currentRotAngles = transform.rotation.eulerAngles;
+                //These currentRotAngles should actually be zero...
+                float heading = Mathf.Atan2(currentDirection.x,currentDirection.y);
+                transform.rotation = Quaternion.Euler(currentRotAngles.x, heading * Mathf.Rad2Deg, currentRotAngles.z);
+            }
             transform.position += movement * speed * Time.deltaTime;
         }
         void Teleport(Vector2 newPosition)

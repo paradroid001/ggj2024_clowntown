@@ -7,6 +7,8 @@ namespace ClownTown
 {
     public class LevelManager : MonoBehaviour
     {
+        [SerializeField]
+        string levelName = "Unknown Level";
         // Start is called before the first frame update
         void Start()
         {
@@ -18,6 +20,12 @@ namespace ClownTown
         {
             
         }
+
+        void DisplayLevelName()
+        {
+            ClownGameManager.GetInstance().OnDisplayLevelName(levelName);
+        }
+
         public void OnPlayerJoin(PlayerInput playerInput)
         {
             Debug.Log("On Player Join");

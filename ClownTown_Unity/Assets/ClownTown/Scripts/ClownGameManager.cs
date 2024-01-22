@@ -8,7 +8,6 @@ namespace ClownTown
     public class ClownGameManager : MonoBehaviour
     {
         protected static ClownGameManager instance = null;
-
         public string gameSceneName;
         public string menuSceneName;
         
@@ -25,6 +24,11 @@ namespace ClownTown
             {
                 Destroy(gameObject);
             }
+        }
+
+        public static ClownGameManager GetInstance()
+        {
+            return instance;
         }
 
         void Init()
@@ -73,6 +77,11 @@ namespace ClownTown
         public void OnQuit()
         {
             Application.Quit();
+        }
+
+        public void OnDisplayLevelName(string levelName)
+        {
+            Debug.Log($"Display Level Name: {levelName}");
         }
         
     }

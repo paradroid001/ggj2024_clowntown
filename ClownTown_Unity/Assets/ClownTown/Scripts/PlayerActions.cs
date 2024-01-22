@@ -7,10 +7,11 @@ namespace ClownTown
 {
     public class PlayerActions : ActorActions
     {
+        PlayerManager playerManager;
         // Start is called before the first frame update
         override protected void Start()
         {
-            
+            playerManager = GetComponent<PlayerManager>();
         }
 
         // Update is called once per frame
@@ -42,6 +43,10 @@ namespace ClownTown
         public void OnInputFire(InputAction.CallbackContext context)
         {
             Debug.Log("Fire");
+            if (playerManager != null && (playerManager.GetCurrentWeapon() != null))
+            {
+                playerManager.GetCurrentWeapon().Fire();
+            }
         }
     }
 }

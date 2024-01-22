@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4430786786064560185}
   - component: {fileID: 6349421149028102511}
   - component: {fileID: 2453990486866768280}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5443301437613104739}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EyeParent (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -143,7 +143,7 @@ GameObject:
   - component: {fileID: 3232298455735162661}
   - component: {fileID: 8793504825743023035}
   - component: {fileID: 8810947078791901117}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Frill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -241,7 +241,7 @@ GameObject:
   - component: {fileID: 2917372040493474382}
   - component: {fileID: 6396383433772581148}
   - component: {fileID: 4410799256374299703}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -338,7 +338,7 @@ GameObject:
   - component: {fileID: 3174568048891633411}
   - component: {fileID: 231660545207474866}
   - component: {fileID: 569403634877132782}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Right Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -436,7 +436,7 @@ GameObject:
   - component: {fileID: 3252347057716399649}
   - component: {fileID: 6898496716754662895}
   - component: {fileID: 8540432063471334721}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -535,7 +535,7 @@ GameObject:
   - component: {fileID: 750738337251229949}
   - component: {fileID: 8529667259928244427}
   - component: {fileID: 1995426897233015507}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -630,7 +630,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1383033722174550603}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BossObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -667,7 +667,7 @@ GameObject:
   - component: {fileID: 3957775492906638207}
   - component: {fileID: 4016612666810934178}
   - component: {fileID: 6132652177121054422}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -761,7 +761,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7304342003190518096}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -794,7 +794,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2571081763157365428}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EyeParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -830,7 +830,7 @@ GameObject:
   - component: {fileID: 3251871144610790155}
   - component: {fileID: 1807529598873812296}
   - component: {fileID: 5176416115962576602}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Left Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}

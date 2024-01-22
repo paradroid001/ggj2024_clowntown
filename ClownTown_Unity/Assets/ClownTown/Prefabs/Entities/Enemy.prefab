@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 449497394785180662}
   - component: {fileID: 66594228481006289}
   - component: {fileID: 2061073049413494082}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63,8 +63,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0358aae5c86292946a45047eb83052c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 5
+  maxSpeed: 3
   speed: 3
+  faceCurrentDirection: 1
 --- !u!54 &2061073049413494082
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -93,7 +94,7 @@ GameObject:
   - component: {fileID: 5943889953537344666}
   - component: {fileID: 6227869371180931016}
   - component: {fileID: 2835593178901605956}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnemyGeometry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
