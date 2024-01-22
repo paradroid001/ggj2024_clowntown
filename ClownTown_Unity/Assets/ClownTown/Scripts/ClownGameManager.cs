@@ -3,74 +3,77 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ClownGameManager : MonoBehaviour
+namespace ClownTown
 {
-    protected static ClownGameManager instance = null;
-
-    public string gameSceneName;
-    public string menuSceneName;
-    
-    public GameObject mainMenu;
-    // Start is called before the first frame update
-    void Awake()
+    public class ClownGameManager : MonoBehaviour
     {
-        if (instance == null)
+        protected static ClownGameManager instance = null;
+
+        public string gameSceneName;
+        public string menuSceneName;
+        
+        public GameObject mainMenu;
+        // Start is called before the first frame update
+        void Awake()
         {
-            instance = this;
-            Init();
+            if (instance == null)
+            {
+                instance = this;
+                Init();
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
-        else
+
+        void Init()
         {
-            Destroy(gameObject);
+            DontDestroyOnLoad(gameObject);
+            SceneManager.sceneLoaded += OnSceneLoaded;
         }
-    }
 
-    void Init()
-    {
-        DontDestroyOnLoad(gameObject);
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
-
-    void OnDisable()
-    {
-        Debug.Log("ClownGameManager disabled");
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
-
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        if (scene.name == gameSceneName)
+        void OnDisable()
         {
-            OnGameSceneEnter();
+            Debug.Log("ClownGameManager disabled");
+            SceneManager.sceneLoaded += OnSceneLoaded;
         }
-        else if (scene.name == menuSceneName)
+
+        void OnSceneLoaded(Scene scene, LoadSceneMode mode)
         {
-            OnMenuSceneEnter();
+            if (scene.name == gameSceneName)
+            {
+                OnGameSceneEnter();
+            }
+            else if (scene.name == menuSceneName)
+            {
+                OnMenuSceneEnter();
+            }
         }
-    }
 
-    void OnMenuSceneEnter()
-    {
-        mainMenu.SetActive(true);
-    }
+        void OnMenuSceneEnter()
+        {
+            mainMenu.SetActive(true);
+        }
 
-    void OnGameSceneEnter()
-    {
-        mainMenu.SetActive(false);
-    }
+        void OnGameSceneEnter()
+        {
+            mainMenu.SetActive(false);
+        }
 
-    public void OnPlay()
-    {
-        Debug.Log("OnPlay");
-        SceneManager.LoadScene(gameSceneName);
+        public void OnPlay()
+        {
+            Debug.Log("OnPlay");
+            SceneManager.LoadScene(gameSceneName);
+        }
+        public void OnCredits()
+        {
+            Debug.Log("OnCredits");
+        }
+        public void OnQuit()
+        {
+            Application.Quit();
+        }
+        
     }
-    public void OnCredits()
-    {
-        Debug.Log("OnCredits");
-    }
-    public void OnQuit()
-    {
-        Application.Quit();
-    }
-    
 }
