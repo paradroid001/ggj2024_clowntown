@@ -38,7 +38,7 @@ namespace ClownTown
             {
                 timeSinceLastFire = 0;
                 Instantiate(settings.bulletPrefab, firePoint.position, firePoint.rotation);
-                
+                PlayFireSound();
             }
         }
 
