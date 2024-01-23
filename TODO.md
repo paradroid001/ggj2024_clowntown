@@ -1,0 +1,7 @@
+- [ ] killed enemies = orb drop
+- [ ] kick orbs
+- [ ] hit boss | vulnerable or not
+- [ ] hurt player, per player UI.
+- [ ] player can die and respawn?
+- [ ] boss movement, hands movement
+- [ ] round timer?
