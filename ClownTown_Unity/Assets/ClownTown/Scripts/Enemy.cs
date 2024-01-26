@@ -9,18 +9,19 @@ namespace ClownTown
         [SerializeField]
         protected Health health;
         protected Rigidbody rb;
-        
+
         //The character geometry etc with its own animations.
         [SerializeField]
         protected AnimatedObject character;
 
         protected ActorActions actions;
-        
+
         // Start is called before the first frame update
         virtual protected void Awake()
         {
             health = GetComponent<Health>();
             actions = GetComponent<ActorActions>();
+            actions.SetCharacter(character);
             rb = GetComponent<Rigidbody>();
             health.OnDeathStateChanged.AddListener(OnDead);
             OnDead(false);
@@ -34,7 +35,7 @@ namespace ClownTown
         // Update is called once per frame
         virtual protected void Update()
         {
-            
+
         }
 
         protected virtual void OnDead(bool isDead)

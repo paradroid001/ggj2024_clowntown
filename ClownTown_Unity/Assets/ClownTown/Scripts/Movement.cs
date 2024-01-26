@@ -11,12 +11,12 @@ namespace ClownTown
         public bool faceCurrentDirection = true;
         Vector2 currentDirection;
         Vector3 movement;
-        
+
         public static Vector2 GetVector2FromXZ(Vector3 v)
         {
             return new Vector2(v.x, v.z);
         }
-        
+
         public static Vector3 GetVector3FromXY(Vector2 v)
         {
             return new Vector3(v.x, 0, v.y);
@@ -28,9 +28,10 @@ namespace ClownTown
             StopMoving();
         }
 
-        void StopMoving()
+        public void StopMoving()
         {
             currentDirection = Vector2.zero;
+            speed = 0;
         }
 
         // Update is called once per frame
@@ -38,6 +39,11 @@ namespace ClownTown
         {
             movement = GetVector3FromXY(currentDirection).normalized;
             Move();
+        }
+
+        public float GetCurrentSpeed()
+        {
+            return speed;
         }
 
         public void SetDirection(Vector2 newDirection)
@@ -51,7 +57,7 @@ namespace ClownTown
             }
             else
             {
-                speed=0;
+                speed = 0;
             }
         }
         public void SetDirection(float x, float y)
@@ -66,7 +72,7 @@ namespace ClownTown
             {
                 Vector3 currentRotAngles = transform.rotation.eulerAngles;
                 //These currentRotAngles should actually be zero...
-                float heading = Mathf.Atan2(currentDirection.x,currentDirection.y);
+                float heading = Mathf.Atan2(currentDirection.x, currentDirection.y);
                 transform.rotation = Quaternion.Euler(currentRotAngles.x, heading * Mathf.Rad2Deg, currentRotAngles.z);
             }
             transform.position += movement * speed * Time.deltaTime;

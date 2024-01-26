@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: LollypopAnimationController
+  m_Controller: {fileID: 9100000, guid: f7f1a55d32839544baff5a513b6915c4, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: fcef4a85f2400bc3f8362cfee6af94c7, type: 2}
+    m_OverrideClip: {fileID: 1827226128182048838, guid: f28a97971362ec66dab29e618df26206, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 354f6fa1d75ac095d84a8de299336143, type: 2}
+    m_OverrideClip: {fileID: 1827226128182048838, guid: a2f2706283bcb7ff681adbb9292c2862, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 97debbb62fa62a27d8a6b456b280b32d, type: 2}
+    m_OverrideClip: {fileID: 1827226128182048838, guid: cfde23f979df9469687ea93b11a725e2, type: 3}

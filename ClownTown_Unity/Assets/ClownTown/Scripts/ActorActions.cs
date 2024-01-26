@@ -14,6 +14,7 @@ namespace ClownTown
         protected ObjectState startState = ObjectState.NONE;
 
         protected ObjectState currentState;
+        protected AnimatedObject character;
 
         // Start is called before the first frame update
         virtual protected void Start()
@@ -24,7 +25,12 @@ namespace ClownTown
         // Update is called once per frame
         virtual protected void Update()
         {
-            
+
+        }
+
+        virtual public void SetCharacter(AnimatedObject newCharacter)
+        {
+            character = newCharacter;
         }
 
         virtual public void SetState(ObjectState newState)

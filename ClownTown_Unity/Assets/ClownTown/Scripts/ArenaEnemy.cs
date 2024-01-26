@@ -8,14 +8,18 @@ namespace ClownTown
     {
         [SerializeField]
         protected AnimatedObject orb;
-        
+
         protected override void OnDead(bool isDead)
         {
             if (isDead)
             {
                 actions.SetState(ObjectState.LIFECYCLE_DEAD);
-                character.Hide();
-                orb.Show();
+                character.GetAnimator().SetBool("IsDead", true);
+                rb.isKinematic = true;
+                rb.velocity = Vector3.zero;
+
+                //character.Hide();
+                //orb.Show();
             }
             else
             {
