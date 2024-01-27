@@ -34,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &7446703948857564400
 Rigidbody:
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: {fileID: 409653960005796419}
   character: {fileID: 0}
-  orb: {fileID: 0}
+  hitFadeTime: 0.15
 --- !u!114 &9078845298753217092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,6 +80,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movement: {fileID: 8876297808999146339}
+  startState: 4
   roamRadius: 3
   destinationThresholdRadius: 0.25
   changeDirectionTime: 4

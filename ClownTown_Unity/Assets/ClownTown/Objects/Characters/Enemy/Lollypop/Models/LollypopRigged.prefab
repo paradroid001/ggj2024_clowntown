@@ -10,9 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 816004939289509063}
   - component: {fileID: 1852684596500138524}
-  m_Layer: 0
+  - component: {fileID: 1852684596500138526}
+  - component: {fileID: 1852684596500138525}
+  m_Layer: 8
   m_Name: LollypopRigged
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36,7 +38,7 @@ Transform:
   - {fileID: 8889263749125939048}
   - {fileID: 3270954392261132861}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1852684596500138524
 Animator:
@@ -58,6 +60,31 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &1852684596500138526
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6993476589774461}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6920521, y: 1.0559868, z: 0.3730643}
+  m_Center: {x: 0.012578563, y: -0.07055362, z: -0.22103024}
+--- !u!114 &1852684596500138525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6993476589774461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 201a7003f3d0a9b4c8f93793adac6490, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1079873918646172712
 GameObject:
   m_ObjectHideFlags: 0
@@ -67,7 +94,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 999984754211289849}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lolliepop_joint5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +125,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8889263749125939048}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lolliepop_root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +157,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3270954392261132861}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: transform1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,7 +188,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3622767133704864641}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lolliepop_Lolliepop_leg01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -194,7 +221,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5528326048894835772}
   - component: {fileID: 2995906029495837805}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lolliepop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -284,7 +311,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5871000372923887853}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lolliepop_Lolliepop_leg02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -316,7 +343,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5007529946939681569}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lolliepop_Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -348,7 +375,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1140525718350806538}
   - component: {fileID: 7115644878591060619}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -436,7 +463,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8244690083304376831}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ikHandle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -467,7 +494,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2489504039116789069}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lolliepop_Foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -499,7 +526,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6454946171476650630}
   - component: {fileID: 6571522883310771173}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Eyes_X
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -587,7 +614,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9151397274540298950}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lolliepop_Lolliepop_leg03
   m_TagString: Untagged
   m_Icon: {fileID: 0}

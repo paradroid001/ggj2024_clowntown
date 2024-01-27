@@ -6,9 +6,6 @@ namespace ClownTown
 {
     public class ArenaEnemy : Enemy
     {
-        [SerializeField]
-        protected AnimatedObject orb;
-
         protected override void OnDead(bool isDead)
         {
             if (isDead)
@@ -24,7 +21,6 @@ namespace ClownTown
             else
             {
                 actions.SetState(ObjectState.LIFECYCLE_NORMAL);
-                orb.Hide();
                 character.Show();
             }
         }
@@ -32,6 +28,7 @@ namespace ClownTown
         protected override void OnCollisionEnter(Collision other)
         {
             base.OnCollisionEnter(other);
+            /*
             if (actions.GetState() == ObjectState.LIFECYCLE_DEAD)
             {
                 if (other.gameObject.CompareTag("Player"))
@@ -39,6 +36,7 @@ namespace ClownTown
                     rb.AddForce(Vector3.up * 50f, ForceMode.Impulse);
                 }
             }
+            */
         }
 
     }
