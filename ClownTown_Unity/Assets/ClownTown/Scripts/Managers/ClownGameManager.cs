@@ -10,6 +10,9 @@ namespace ClownTown
         protected static ClownGameManager instance = null;
         public string gameSceneName;
         public string menuSceneName;
+
+        [SerializeField]
+        protected LevelUI levelUI;
         
         public GameObject mainMenu;
         // Start is called before the first frame update
@@ -29,6 +32,11 @@ namespace ClownTown
         public static ClownGameManager GetInstance()
         {
             return instance;
+        }
+
+        public LevelUI GetLevelUI()
+        {
+            return levelUI;
         }
 
         void Init()

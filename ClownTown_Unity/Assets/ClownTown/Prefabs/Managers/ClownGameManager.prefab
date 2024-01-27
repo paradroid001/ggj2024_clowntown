@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameSceneName: ClownTest
   menuSceneName: ClownMenu
+  levelUI: {fileID: 4563522632275680492}
   mainMenu: {fileID: 2359120957151266649}
 --- !u!1001 &217785456069655316
 PrefabInstance:
@@ -496,6 +497,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1841211607305175396}
   m_SourcePrefab: {fileID: 100100000, guid: 05d120124060cb045bd7a0f4756a29e9, type: 3}
+--- !u!114 &4563522632275680492 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 524836565696996817, guid: 05d120124060cb045bd7a0f4756a29e9, type: 3}
+  m_PrefabInstance: {fileID: 4043242581360785725}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55fb76634e88e1448b19fc1b9064c29f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &4860168912437107336 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8894242390308283317, guid: 05d120124060cb045bd7a0f4756a29e9, type: 3}

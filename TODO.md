@@ -4,4 +4,6 @@
 - [ ] hurt player, per player UI.
 - [ ] player can die and respawn?
 - [ ] boss movement, hands movement
-- [ ] round timer?
+- [ ] round timer? score for players
+- [ ] boss eye movement
+- [ ] screen shake

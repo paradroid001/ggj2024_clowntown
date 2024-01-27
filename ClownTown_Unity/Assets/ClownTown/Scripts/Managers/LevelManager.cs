@@ -10,17 +10,29 @@ namespace ClownTown
         [SerializeField]
         string levelName = "Unknown Level";
         [SerializeField]
+        int levelStartTime = 120; 
+        private float levelTime = 0;
+        [SerializeField]
+        int levelEnrageThreshold = 60; //how many seconds left when enrage mode entered.
+
+        [SerializeField]
         Transform[] playerSpawns = new Transform[4]; //TODO hardcoded :X
+
+        protected LevelUI levelUI;
+
         // Start is called before the first frame update
         void Start()
         {
-            
+            levelUI = ClownGameManager.GetInstance().GetLevelUI();
+            levelTime = levelStartTime;
+            levelUI.SetTime((int)levelTime);
         }
 
         // Update is called once per frame
         void Update()
         {
-            
+            levelTime -= Time.deltaTime;
+            levelUI.SetTime((int)levelTime);
         }
 
         void DisplayLevelName()
@@ -46,5 +58,7 @@ namespace ClownTown
         {
 
         }
+
+
     }
 }

@@ -90,6 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55fb76634e88e1448b19fc1b9064c29f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelTimerText: {fileID: 1336899778606371777}
 --- !u!1 &4095343368295251690
 GameObject:
   m_ObjectHideFlags: 0

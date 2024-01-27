@@ -12,6 +12,8 @@ namespace ClownTown
         protected ClownWeaponSettings settings;
         [SerializeField]
         protected AudioSource audioSource;
+
+        protected PlayerManager playerOwner;
         
         private float timeSinceLastFire = 0;
         // Start is called before the first frame update
@@ -26,6 +28,11 @@ namespace ClownTown
             timeSinceLastFire = settings.fireRate;
         }
 
+        public void SetPlayerOwner(PlayerManager owner)
+        {
+            playerOwner = owner;
+        }
+
         // Update is called once per frame
         void Update()
         {
@@ -37,7 +44,8 @@ namespace ClownTown
             if (timeSinceLastFire > settings.fireRate)
             {
                 timeSinceLastFire = 0;
-                Instantiate(settings.bulletPrefab, firePoint.position, firePoint.rotation);
+                Bullet b = Instantiate(settings.bulletPrefab, firePoint.position, firePoint.rotation);
+                b.SetPlayer(playerOwner);
                 PlayFireSound();
             }
         }

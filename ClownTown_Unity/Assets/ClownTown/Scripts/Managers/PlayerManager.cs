@@ -9,18 +9,36 @@ namespace ClownTown
         [SerializeField]
         protected ClownGameSettings settings;
         [SerializeField]
-        protected Renderer playerRenderer;
+        protected Renderer[] playerColouredRenderers;
         [SerializeField]
         protected Transform weaponAttachPoint;
         [SerializeField]
         protected Weapon currentWeapon;
+        protected Color playerColour;
+        protected Rigidbody rb;
+
+        protected Movement movement;
+
+        protected MaterialPropertyBlock propertyBlock;
+
         public void PlayerSetup(int playerIndex)
         {
+            propertyBlock = new MaterialPropertyBlock();
+            rb = GetComponent<Rigidbody>();
+            movement = GetComponent<Movement>();
+            
             Debug.Log($"Setting up player {playerIndex}");
             if (playerIndex >= 0 && playerIndex < ClownGameSettings.maxPlayers)
             {
-                playerRenderer.material = settings.playerMaterialArray[playerIndex];
-                playerRenderer.material.color = settings.playerColorArray[playerIndex];
+                playerColour = settings.playerColorArray[playerIndex];
+                propertyBlock.SetColor("_Color", playerColour);
+                for (int i = 0; i < playerColouredRenderers.Length; i++)
+                {
+                    //playerColouredRenderers[i].material.color = playerColour;
+                    playerColouredRenderers[i].SetPropertyBlock(propertyBlock);
+                }
+                currentWeapon.SetPlayerOwner(this);
+                
             }
             else
             {
@@ -28,8 +46,23 @@ namespace ClownTown
             }
         }
 
+        public Color GetPlayerColour()
+        {
+            return playerColour;
+        }
+        public Vector3 getPlayerVelocity()
+        {
+            return rb.velocity;
+        }
+        public float GetPlayerSpeed()
+        {
+            return movement.GetCurrentSpeed();
+        }
+
         void OnTriggerEnter(Collider other)
         {
+            // Collecting weapons is disabled
+            /*
             if (other.tag == "Weapon")
             {
                 //Destroy your current weapon
@@ -45,6 +78,7 @@ namespace ClownTown
                 currentWeapon = w;
                 w.PlayCollectSound();
             }
+            */
         }
 
         public Weapon GetCurrentWeapon()
