@@ -14,6 +14,9 @@ namespace ClownTown
         protected AnimatedObject handRight;
 
         [SerializeField]
+        protected ArenaEnemy[] enemyPrefabs;
+
+        [SerializeField]
         protected float timeBetweenEvents = 5;
         [SerializeField]
         protected float laughTime = 3;
@@ -59,6 +62,12 @@ namespace ClownTown
                 handLeft.GetAnimator().SetTrigger("Throw");
                 handRight.GetAnimator().SetTrigger("Throw");
 
+                for (int i = 0; i < numPlayers; i++)
+                {
+                    MakeEnemy();
+                    MakeEnemy();
+                }
+
                 SetState(ObjectState.NORMAL);
             }
             if (currentState == ObjectState.CLOWN_LAUGHING)
@@ -76,6 +85,10 @@ namespace ClownTown
             if (newState == ObjectState.NORMAL)
             {
                 eventTimer = 0;
+                if (oldState == ObjectState.CLOWN_LAUGHING)
+                {
+                    character.GetAnimator().SetBool("Laughing", false);
+                }
             }
             if (newState == ObjectState.CLOWN_LAUGHING && oldState != ObjectState.CLOWN_LAUGHING)
             {
@@ -100,11 +113,15 @@ namespace ClownTown
         {
             // 0 = Attack (smash)
             // 1-n = Spawn
-            int eventType = Random.Range(0, numPlayers + 1);
+            int eventType = Random.Range(0, 3);
             if (eventType == 0)
             {
                 Debug.Log("Choosing Attack");
                 SetState(ObjectState.CLOWN_ATTACKING);
+            }
+            else if (eventType == 1)
+            {
+                SetState(ObjectState.CLOWN_LAUGHING);
             }
             else
             {
@@ -119,6 +136,15 @@ namespace ClownTown
             character.GetAnimator().SetTrigger("Damaged");
             handLeft.GetAnimator().SetTrigger("Damaged");
             handRight.GetAnimator().SetTrigger("Damaged");
+        }
+
+        public void MakeEnemy()
+        {
+            ArenaEnemy enemyPrefab = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
+            ArenaEnemy e1 = Instantiate(enemyPrefab, handRight.transform.position, Quaternion.identity);
+
+            ArenaEnemy e2 = Instantiate(enemyPrefab, handLeft.transform.position, Quaternion.identity);
+
         }
     }
 }

@@ -210,7 +210,7 @@ MonoBehaviour:
   handLeft: {fileID: 3889498129734404739}
   handRight: {fileID: 3153220834423699223}
   timeBetweenEvents: 5
-  laughTime: 3
+  laughTime: 5
 --- !u!114 &3950418245746294137 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 409653960005796419, guid: 497af1eda0bf3364eabec1b7c25d7723, type: 3}
