@@ -16,6 +16,9 @@ namespace ClownTown
         int levelEnrageThreshold = 60; //how many seconds left when enrage mode entered.
 
         [SerializeField]
+        protected BossEnemy boss;
+
+        [SerializeField]
         Transform[] playerSpawns = new Transform[4]; //TODO hardcoded :X
 
         protected int currentPlayersInLevel = 0;
@@ -28,6 +31,7 @@ namespace ClownTown
             levelUI = ClownGameManager.GetInstance().GetLevelUI();
             levelTime = levelStartTime;
             levelUI.SetTime((int)levelTime);
+            ClownGameManager.GetInstance().SetCurrentLevelManager(this);
         }
 
         // Update is called once per frame
@@ -41,6 +45,13 @@ namespace ClownTown
         {
             ClownGameManager.GetInstance().OnDisplayLevelName(levelName);
         }
+
+        public BossEnemy GetBoss()
+        {
+            return boss;
+        }
+
+
 
         public void OnPlayerJoin(PlayerInput playerInput)
         {

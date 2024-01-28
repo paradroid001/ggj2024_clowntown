@@ -6,7 +6,6 @@ namespace ClownTown
 {
     public class BossEnemy : Enemy
     {
-
         public bool IsVulnerable()
         {
             return actions.GetState() == ObjectState.CLOWN_LAUGHING;
@@ -25,8 +24,10 @@ namespace ClownTown
             {
                 if (IsVulnerable())
                 {
-                    OnHit(other, "Orb");
+                    OnHit(other, "Orb"); //This will subtract health
                     Debug.Log("Successful hit");
+                    BossEnemyActions bossEnemyActions = (BossEnemyActions)actions;
+                    bossEnemyActions.OnDamaged();
                 }
                 else
                 {

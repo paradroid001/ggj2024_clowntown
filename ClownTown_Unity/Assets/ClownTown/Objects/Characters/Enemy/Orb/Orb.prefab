@@ -65,6 +65,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orbBackslideTimer: 5
+  orbBoost: 2.5
 --- !u!198 &4127365067057274868
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -4858,6 +4859,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9c2075a4497fda18384a3221176e6580, type: 2}
+    - target: {fileID: 6249860188541650792, guid: 813d4f09488a6de439fb960b0fe85ae7, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 6c0884585dd99614b9d9f7d48355a911, type: 2}
     - target: {fileID: 6910521889612380078, guid: 813d4f09488a6de439fb960b0fe85ae7, type: 3}
       propertyPath: m_RootOrder
       value: -1

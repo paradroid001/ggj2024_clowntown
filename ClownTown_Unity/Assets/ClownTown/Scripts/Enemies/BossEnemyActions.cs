@@ -45,6 +45,9 @@ namespace ClownTown
                 //Grimace a little.
                 character.GetAnimator().SetTrigger("Grimace");
                 Debug.Log("Hands should smash here");
+                handLeft.GetAnimator().SetTrigger("Attack");
+                handRight.GetAnimator().SetTrigger("Attack");
+
                 SetState(ObjectState.NORMAL);
             }
             if (currentState == ObjectState.CLOWN_THROWING)
@@ -53,6 +56,8 @@ namespace ClownTown
                 character.GetAnimator().SetTrigger("Throw");
                 //Hands should throw here.
                 Debug.Log("Hands should throw here");
+                handLeft.GetAnimator().SetTrigger("Throw");
+                handRight.GetAnimator().SetTrigger("Throw");
 
                 SetState(ObjectState.NORMAL);
             }
@@ -64,8 +69,6 @@ namespace ClownTown
                     SetState(ObjectState.NORMAL);
                 }
             }
-
-
         }
 
         override protected ObjectState TransitionState(ObjectState oldState, ObjectState newState)
@@ -109,6 +112,13 @@ namespace ClownTown
                 SetState(ObjectState.CLOWN_THROWING);
             }
 
+        }
+
+        public void OnDamaged()
+        {
+            character.GetAnimator().SetTrigger("Damaged");
+            handLeft.GetAnimator().SetTrigger("Damaged");
+            handRight.GetAnimator().SetTrigger("Damaged");
         }
     }
 }

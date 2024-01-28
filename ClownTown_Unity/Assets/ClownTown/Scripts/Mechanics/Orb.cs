@@ -7,19 +7,25 @@ public class Orb : MonoBehaviour
 {
     [SerializeField]
     protected float orbBackslideTimer = 5.0f;
+    [SerializeField]
+    protected float orbBoost = 2.5f;
     protected float orbTimer;
+    Transform bossTransform;
 
     Rigidbody rb;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        bossTransform = ClownGameManager.GetInstance().GetCurrentLevelManager().GetBoss().transform;
     }
 
     // Update is called once per frame
     void Update()
     {
+        Vector3 toBoss = bossTransform.position - transform.position;
 
+        rb.AddForce(toBoss.normalized * rb.velocity.magnitude * orbBoost, ForceMode.Force);
     }
 
     void Reset()

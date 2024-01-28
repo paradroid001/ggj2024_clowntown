@@ -13,7 +13,10 @@ namespace ClownTown
 
         [SerializeField]
         protected LevelUI levelUI;
-        
+
+        [SerializeField]
+        protected LevelManager currentLevelManager;
+
         public GameObject mainMenu;
         // Start is called before the first frame update
         void Awake()
@@ -91,6 +94,14 @@ namespace ClownTown
         {
             Debug.Log($"Display Level Name: {levelName}");
         }
-        
+
+        public LevelManager GetCurrentLevelManager()
+        {
+            return currentLevelManager;
+        }
+        public void SetCurrentLevelManager(LevelManager levelManager)
+        {
+            currentLevelManager = levelManager;
+        }
     }
 }

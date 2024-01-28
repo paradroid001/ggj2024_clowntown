@@ -59,6 +59,17 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 14b19afe3a41cf646916b0e980fac6a2, type: 3}
+--- !u!114 &3889498129734404739 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1833276517648464083, guid: 14b19afe3a41cf646916b0e980fac6a2, type: 3}
+  m_PrefabInstance: {fileID: 3209763297639133776}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 201a7003f3d0a9b4c8f93793adac6490, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &7035207227596763761 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5560059901435674657, guid: 14b19afe3a41cf646916b0e980fac6a2, type: 3}
@@ -196,6 +207,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movement: {fileID: 5211552872892685401}
   startState: 0
+  handLeft: {fileID: 3889498129734404739}
+  handRight: {fileID: 3153220834423699223}
   timeBetweenEvents: 5
   laughTime: 3
 --- !u!114 &3950418245746294137 stripped
@@ -284,6 +297,17 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 6bddae0b085e85d4c9ce36fdded039cc, type: 3}
+--- !u!114 &3153220834423699223 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6812577757289643565, guid: 6bddae0b085e85d4c9ce36fdded039cc, type: 3}
+  m_PrefabInstance: {fileID: 8451390373218388282}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 201a7003f3d0a9b4c8f93793adac6490, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &9194709858041499621 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 780095950034962143, guid: 6bddae0b085e85d4c9ce36fdded039cc, type: 3}
