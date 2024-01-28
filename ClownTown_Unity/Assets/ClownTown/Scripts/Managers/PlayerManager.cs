@@ -26,7 +26,7 @@ namespace ClownTown
             propertyBlock = new MaterialPropertyBlock();
             rb = GetComponent<Rigidbody>();
             movement = GetComponent<Movement>();
-            
+
             Debug.Log($"Setting up player {playerIndex}");
             if (playerIndex >= 0 && playerIndex < ClownGameSettings.maxPlayers)
             {
@@ -38,7 +38,7 @@ namespace ClownTown
                     playerColouredRenderers[i].SetPropertyBlock(propertyBlock);
                 }
                 currentWeapon.SetPlayerOwner(this);
-                
+
             }
             else
             {
@@ -50,13 +50,18 @@ namespace ClownTown
         {
             return playerColour;
         }
-        public Vector3 getPlayerVelocity()
+        public Vector3 GetPlayerVelocity()
         {
             return rb.velocity;
         }
         public float GetPlayerSpeed()
         {
             return movement.GetCurrentSpeed();
+        }
+
+        public Vector2 GetPlayerCurrentDirection()
+        {
+            return movement.GetCurrentDirection();
         }
 
         void OnTriggerEnter(Collider other)

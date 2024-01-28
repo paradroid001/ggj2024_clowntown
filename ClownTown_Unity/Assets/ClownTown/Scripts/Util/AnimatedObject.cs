@@ -14,10 +14,12 @@ namespace ClownTown
     [RequireComponent(typeof(Animator))]
     public class AnimatedObject : MonoBehaviour
     {
-        protected Animator animator; 
+        protected Animator animator;
+        new protected Collider collider;
         void Awake()
         {
             animator = GetComponent<Animator>();
+            collider = GetComponent<Collider>();
         }
         public void PlayState(string statename)
         {
@@ -30,6 +32,10 @@ namespace ClownTown
         public Animator GetAnimator()
         {
             return animator;
+        }
+        public Collider GetCollider()
+        {
+            return collider;
         }
         public void Hide()
         {

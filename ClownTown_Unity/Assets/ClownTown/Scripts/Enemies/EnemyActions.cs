@@ -28,7 +28,7 @@ namespace ClownTown
         // Update is called once per frame
         override protected void Update()
         {
-            if (currentState == ObjectState.LIFECYCLE_NORMAL)
+            if (currentState == ObjectState.NORMAL)
             {
                 timer += Time.deltaTime;
                 if (timer > changeDirectionTime || Vector2.Distance(Movement.GetVector2FromXZ(transform.position), currentDestination) < destinationThresholdRadius)
@@ -50,7 +50,7 @@ namespace ClownTown
 
         override protected ObjectState TransitionState(ObjectState oldState, ObjectState newState)
         {
-            if (newState == ObjectState.LIFECYCLE_DEAD)
+            if (newState == ObjectState.DEAD)
             {
                 movement.StopMoving();
                 movement.enabled = false;

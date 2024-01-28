@@ -243,7 +243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movement: {fileID: 7241020060240095257}
-  startState: 4
+  startState: 0
 --- !u!114 &7241020060240095257
 MonoBehaviour:
   m_ObjectHideFlags: 0

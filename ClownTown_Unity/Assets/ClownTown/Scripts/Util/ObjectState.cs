@@ -6,12 +6,14 @@ namespace ClownTown
 {
     public enum ObjectState
     {
-        // States coming from an effect
-        EFFECT_DAZED,
-        EFFECT_FROZEN,
-        // Lifecycle states
-        LIFECYCLE_NORMAL,
-        LIFECYCLE_DEAD,
+        NORMAL,
+        ENRAGED,
+        DEAD,
+        PLAYER_DAZED,
+        CLOWN_DAMAGED,
+        CLOWN_THROWING,
+        CLOWN_ATTACKING,
+        CLOWN_LAUGHING,
         NONE
     }
 }

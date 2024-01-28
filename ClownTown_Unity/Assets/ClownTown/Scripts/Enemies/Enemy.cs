@@ -18,7 +18,7 @@ namespace ClownTown
         protected Renderer[] characterRenderers;
         protected MaterialPropertyBlock hittablePropertyBlock;
         float hitAmount = 0;
-        
+
         [SerializeField]
         protected float hitFadeTime = 0.2f;
 
@@ -47,11 +47,11 @@ namespace ClownTown
         {
             if (hitAmount > 0.0f)
             {
-                hitAmount -= (1.0f/hitFadeTime) * Time.deltaTime;
+                hitAmount -= (1.0f / hitFadeTime) * Time.deltaTime;
                 if (hitAmount < 0)
                     hitAmount = 0;
                 hittablePropertyBlock.SetFloat("_HitAmount", hitAmount);
-                for (int i =0; i < characterRenderers.Length; i++)
+                for (int i = 0; i < characterRenderers.Length; i++)
                 {
                     characterRenderers[i].SetPropertyBlock(hittablePropertyBlock);
                 }
@@ -59,6 +59,11 @@ namespace ClownTown
         }
 
         protected virtual void OnDead(bool isDead)
+        {
+            //Override me.
+        }
+
+        protected virtual void Die()
         {
             //Override me.
         }

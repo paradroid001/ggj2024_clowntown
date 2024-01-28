@@ -46,6 +46,11 @@ namespace ClownTown
             return speed;
         }
 
+        public Vector2 GetCurrentDirection()
+        {
+            return currentDirection;
+        }
+
         public void SetDirection(Vector2 newDirection)
         {
             //Only set a new direction if you get

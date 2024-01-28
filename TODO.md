@@ -1,3 +1,4 @@
+- [ ] Sounds for almost everything
 - [ ] killed enemies = orb drop
 - [ ] kick orbs
 - [ ] hit boss | vulnerable or not

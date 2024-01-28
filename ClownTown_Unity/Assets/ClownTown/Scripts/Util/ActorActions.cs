@@ -11,7 +11,7 @@ namespace ClownTown
         [SerializeField]
         protected Movement movement;
         [SerializeField]
-        protected ObjectState startState = ObjectState.NONE;
+        protected ObjectState startState = ObjectState.NORMAL;
 
         protected ObjectState currentState;
         protected AnimatedObject character;

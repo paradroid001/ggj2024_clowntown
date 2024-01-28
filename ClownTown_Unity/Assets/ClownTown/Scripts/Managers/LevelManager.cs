@@ -10,13 +10,15 @@ namespace ClownTown
         [SerializeField]
         string levelName = "Unknown Level";
         [SerializeField]
-        int levelStartTime = 120; 
+        int levelStartTime = 120;
         private float levelTime = 0;
         [SerializeField]
         int levelEnrageThreshold = 60; //how many seconds left when enrage mode entered.
 
         [SerializeField]
         Transform[] playerSpawns = new Transform[4]; //TODO hardcoded :X
+
+        protected int currentPlayersInLevel = 0;
 
         protected LevelUI levelUI;
 
@@ -43,6 +45,7 @@ namespace ClownTown
         public void OnPlayerJoin(PlayerInput playerInput)
         {
             Debug.Log("On Player Join");
+            currentPlayersInLevel += 1;
             PlayerManager p = playerInput.gameObject.GetComponent<PlayerManager>();
             if (p != null)
             {
@@ -56,7 +59,7 @@ namespace ClownTown
         }
         public void OnPlayerLeave(PlayerInput playerInput)
         {
-
+            currentPlayersInLevel -= 1;
         }
 
 
